@@ -26,8 +26,10 @@ class Box{
         fill("blue");
         rect(pos.x, pos.y, this.width, this.height);
 
-        if(this.body1.speed<3){
-          super.display();
+        if(this.body1.speed<3){ 
+          rectMode(CENTER); 
+          fill("blue"); 
+          rect(pos.x, pos.y, this.width, this.height); 
         }
         else{
           World.remove(world,this.body1);
