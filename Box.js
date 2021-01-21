@@ -14,7 +14,7 @@ class Box{
         /*this.body2 = Bodies.rectangle(x, y, width, height, options);
         this.width = width;
         this.height = height;
-        this.image = loadImage("polygon.png");
+        this.image = loadImag("polygon.png");
         World.add(world, this.body2);*/
       
       
