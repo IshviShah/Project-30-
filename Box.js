@@ -2,8 +2,8 @@ class Box{
     constructor(x, y, width, height) {
         var options = {
             'restitution':0.8,
-            'friction':1.0,
-            'density':1.0
+            'friction':0,
+            
         }
         this.body1 = Bodies.rectangle(x, y, width, height, options);
         this.width = width;
@@ -14,7 +14,7 @@ class Box{
         /*this.body2 = Bodies.rectangle(x, y, width, height, options);
         this.width = width;
         this.height = height;
-        this.image = loadImag("polygon.png");
+        this.image = loadImage("polygon.png");
         World.add(world, this.body2);*/
       
       
@@ -24,12 +24,15 @@ class Box{
         var pos =this.body1.position;
         rectMode(CENTER);
         fill("blue");
-        rect(pos.x, pos.y, this.width, this.height);
+        //rect(pos.x, pos.y, this.width, this.height);
 
         if(this.body1.speed<3){ 
+          push();
+          translate(pos.x,pos.y);
           rectMode(CENTER); 
           fill("blue"); 
-          rect(pos.x, pos.y, this.width, this.height); 
+          rect(0, 0, this.width, this.height); 
+          pop();
         }
         else{
           World.remove(world,this.body1);
