@@ -42,7 +42,7 @@ function setup(){
     poly = Bodies.circle(50,200,20);
     World.add(world,poly);
 
-    slingshot = new SlingShot(poly,{x:100, y:200});
+    slingshot = new SlingShot(poly,{x:50, y:230});
 
     
 }
